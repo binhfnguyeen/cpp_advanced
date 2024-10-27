@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- inline>internal>external>default browser-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- CSS Internal -->
+    <style>
+        body{
+            background-color: lightskyblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <!-- CSS External -->
+    <link rel="stylesheet" href="CSS/style.css"/>
+        <!-- p, h1{ chinh no
+            color: red;
+        }
+        div p{ con, chau
+            color: gold;
+        }
+        div > p{ con
+            color: brown;
+        }
+        div + p{ anh em phia sau gan nhat
+            color: red;
+        }
+        div ~ p{ anh em
+            color: green;
+        } -->
+    <style>
+        p.t{
+            font-variant: small-caps;
+            text-transform: uppercase;
+            text-decoration: overline;
+            text-shadow: 2px 3px rgb(38, 37, 39);
+            width: 300px;
+            text-align: center;
+            padding: 1px 2px 3px;
+            color: blue;
+        }
+        h1.t1{
+            color: red;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        p.ted{
+            width: 300px;
+            color: gold;
+            white-space: wrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding: 10px;
+            border-style: solid;
+            border-bottom-style: dashed;
+            border-color: plum;
+            border-right-color: yellow;
+            border-left-color: goldenrod;
+            border-width: 10px;
+            border-radius: 30px 0 30px;
+            box-shadow: 3px 5px 3px plum;
+            margin: 0 auto; /*Trái phải: auto -- Canh giữa*/  
+            /* margin-left: auto; Canh phải */
+
+        }
+        div p{
+            color: gold;
+        }
+        div ul{
+            color: blueviolet;
+            font-weight: bold;
+        }
+        ul.ull{
+            list-style-type: square;
+            background-color: antiquewhite;
+            list-style-position: inside;
+        }
+        table.my-table{
+            border-collapse: collapse;
+            color: red;
+        }
+        table.my-table tr:nth-child(even){
+            background-color: blue;
+            color: white;
+        }
+        table.my-table tr:nth-child(odd){
+            background-color: red;
+            color: gold;
+        }
+        table.my-table tr:first-child{
+            text-align: center;
+            font-weight: bold;
+            background-color: brown;
+        }
+        table.my-table tr:last-child{
+            font-size: 20px;
+            background-color: cadetblue;
+        }
+        table.my-table tr:hover{
+            background-color: lightblue;
+            color: red;
+        }
+        /*
+        a:hover nằm sau a:link & a:visited
+        a:active nằm sau a:hover
+        */
+        a{
+            text-decoration: none;
+        }
+        a:link{
+            color: greenyellow;
+        }
+        a:visited{
+            color: gold;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        div.test{
+            background-color: burlywood;
+            overflow: auto; /*Để màu nền full float và thanh kéo xuất hiện khi cần*/
+            font-family: 'Times New Roman', Times, serif;
+        }
+        div.test > img{
+            float: left;
+        }
+        h1{
+            clear: left; 
+            /*Chỉ định hướng không cho thiết lập */
+        }
+        .button{
+            background-color: darkblue;
+            color: white;
+            display: block;
+            padding: 20px;
+            width: 100px;
+        }
+        /*Chuyển từ inline sang block bằng display*/
+        div.t{
+            display: flex; /*flexbox*/
+            flex-wrap: wrap; /*Xuống dòng*/
+            flex-direction: row; /*Chuyển dòng -cột, đảo dòng-cột*/
+            height: 250px;
+            /* justify-content: space-between; */
+            align-content: space-between;
+        }
+        div.t > div{
+            color: blue;
+            width: 24%;
+            height: 120px;
+            border: 2px dashed blue;
+            /* display: inline-block;
+            opacity: 0.3; */
+        }
+    </style>
+</head>
+<body>
+    <div class="t">
+        <div>ABC</div>
+        <div>ABC</div>
+        <div>HIDDEN</div>
+        <!-- <div>ABC</div>
+        <div>ABC</div>
+        <div>ABC</div> -->
+    </div>
+    <div>
+        <a href="#" class="button">GO TO TOP</a>
+    </div>
+    <section>
+        <h1>
+            <a href="https://www.google.com.vn">GOOGLE.COM.VN</a>
+        </h1>
+        <table class="my-table" border="1" width="100%">
+            <tr>
+                <td>STT</td>
+                <td>Ten</td>
+                <td>Nam sinh</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>b</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>b</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>b</td>
+            </tr>
+        </table>
+        <p class="t">Hello world! <br> -Love Chí Vỹ!-</p>
+        <h1 class="t1">Test 1</h1>
+        <div>
+            <p>Test 2</p>
+            <p class="ted" title="TED is a nonpartisan nonprofit devoted to spreading ideas, usually in the form of short, powerful talks. TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 110 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.">TED is a nonpartisan nonprofit devoted to spreading ideas, usually in the form of short, powerful talks. TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 110 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.</p>
+            <p>Test 3</p>
+            <ul>
+                <li>AC</li>
+                <li>DEF</li>
+            </ul>
+            <p>Test 4</p>
+            <ul class="ull">
+                <li>TEST 1</li>
+                <li>TEST 1</li>
+                <li>TEST 1</li>
+                <li>TEST 1</li>
+                <li>TEST 1</li>
+                <li>TEST 1</li>
+            </ul>        
+        </div> -->
+         <div class="test">
+            <img src="/HTML/img/controo.jpg" width="120px"/>
+            Đội tuyển Việt Nam thua trận, nhưng sự phấn khích và cảm giác tự hào mà thầy trò HLV Mai Đức Chung tạo ra cho người hâm mộ chẳng thua kém khi giành chiến thắng ở chung kết SEA Games. Những cổ động viên Việt Nam ở quê nhà thức đến hơn 1h sáng để cổ vũ "những cô gái kim cương" nhận được món quà vô giá.
+        </div>
+        <h1>test abc</h1>
+    </section>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .items {
+            display: flex;
+        }
+        .item div:nth-child(1), 
+        .item div:nth-child(2){
+            display: inline-block;
+        }
+
+        .item{
+            border: 1px dotted black;
+        }
+
+        .item div:nth-child(1){
+            border: 1px solid black;
+            padding-bottom: 100px;
+            margin-top: 0;
+        }
+
+        .item div:nth-child(2){
+            word-wrap: break-word;
+            width: 50%;
+        }
+
+        .item div:nth-child(3){
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+
+        .item div:nth-child(1), 
+        .item div:nth-child(2){
+            margin: 2px;
+        }
+        .item div:nth-child(3){
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="items">
+        <div class="item">
+            <div class="image">HTML (120x120)</div>
+            <div>Hyper Text Markup Language</div>
+            <div>HTML for Beginner</div>
+        </div>
+        <div class="item">
+            <div class="image">CSS (120x120)</div>
+            <div>Cascading Style Sheet</div>
+            <div>CSS for Beginner</div>
+        </div>
+    </div>
+</body>
+
+</html>

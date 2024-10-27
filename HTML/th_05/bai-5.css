@@ -1,0 +1,170 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+section.nav{
+    background-color: cadetblue;
+}
+
+section.nav > ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+section.nav > ul > li{
+    border-right: 1px solid white;
+    min-width: 120px;
+    text-align: center;
+}
+
+section.nav > ul > li > a{
+    text-decoration: none;
+    display: block;
+    padding: 15px 8px;
+}
+
+section.nav > ul > li:hover{
+    background-color: blue;
+    color: black;
+}
+
+ul.left > li:last-child{
+    border-right: none;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clearfix{
+    overflow: hidden;
+}
+section.banner > div > img{
+    width: 20%;
+}
+section.banner > div{
+    background: linear-gradient(pink, purple);
+    display: flex;
+    margin-top: 10px;
+}
+
+section.banner > div > h1{
+    color: white;
+    font-size: 36px;
+    text-shadow: 2px 3px 2px yellow;
+    position: relative;
+    left: 20%;
+}
+
+section.content{
+    /* background-color: lightblue; */
+    width: 70%;
+    margin: 5px auto;
+}
+
+div.subject > h1{
+    color: white;
+    background-color: darkblue;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+div.subject{
+    margin-top: 10px;
+}
+div.post{
+    display: flex;
+    border-bottom: 1px solid white;
+}
+
+.col1{
+    width: 10%;
+}
+
+.col img:hover{
+    transform: skew(-10deg);
+}
+.col2{
+    width: 40%;
+}
+.col3{
+    width: 20%;
+}
+.ol4{
+    width: 35%;
+    direction: rtl;
+}
+.col{
+    padding: 10px;
+}
+.col>img{
+    width: 100%;
+    border-radius: 50%;
+    background-color: black;
+    transition: transform ease-in-out 0.5s;
+}
+.col>ul{
+    list-style-type: none;
+}
+ul, p{
+    margin: 0;
+}
+
+div.posts{
+    background-color: lightblue;
+}
+
+section.ads > div{
+    position: fixed;
+    background: linear-gradient(lightblue, darkblue);
+    padding: 120px 2px;
+}
+
+.ads-left{
+    left: 0;
+    border-radius: 20px 20px;
+}
+
+.ads-right{
+    right: 0;
+    border-radius: 20px 20px;
+}
+
+section.footer{
+    color: white;
+    background: radial-gradient(lightblue, darkblue);
+}
+
+.tooltipcontent{
+    background-color: lightsalmon;
+    padding: 5px;
+    border-radius: 10px;
+    display: none;
+    border: 2px solid black;
+}
+.tooltipcontent::after{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: red yellow lightsalmon green;
+    position: absolute;
+    top: -18px;
+    right: 10%;
+}
+div.tooltipcontent > ul{
+    list-style-type: none;
+}
+.tooltip:hover .tooltipcontent{
+    display: block;
+    position: absolute;
+    z-index: 999;
+    width: 200px;
+    margin-left: -100px;
+}

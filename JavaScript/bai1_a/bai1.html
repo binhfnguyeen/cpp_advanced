@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 1</title>
+    <script src="bai1.js"></script>
+    <style>
+        @keyframes err{
+            from{
+                outline: unset;
+            } to {
+                outline: 1px solid red;
+            }
+        }
+        
+        .error{
+            animation: err 0.5s 3;
+        }
+        header > div input{
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Giải phương trình ax<sup>2</sup>+bx+c=0</h1>
+    </nav>
+    <header>
+        <div>
+            <span>Nhap a</span>
+            <input type="number" placeholder="Nhap a" id="aId">
+        </div>
+        <div>
+            <span>Nhap b</span>
+            <input type="number" placeholder="Nhap b" id="bId">
+        </div>
+        <div>
+            <span>Nhap c</span>
+            <input type="number" placeholder="Nhap c" id="cId">
+        </div>
+    </header>
+    <footer>
+        <input type="button" value="Giai" onclick="giaiBac2()">
+    </footer>
+    <div id="kq"></div>
+
+    
+</body>
+</html>

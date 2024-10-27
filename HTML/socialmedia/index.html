@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mạng xã hội</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar-left">
+            <div class="user-info">
+                <img class="avatar" src="/HTML/TKWEB/imges/user.png" alt="Avatar">
+                <h3>Người dùng 1</h3>
+            </div>
+            <div class="settings">
+                <h3>Cài đặt</h3>
+                <ul>
+                    <li>Thay đổi mật khẩu</li>
+                    <li>Thay đổi ảnh đại diện</li>
+                    <li>Cài đặt riêng tư</li>
+                    <!-- Thêm các tùy chọn cài đặt khác vào đây -->
+                </ul>
+            </div>
+            <div class="logout">
+                <button onclick="logout()">Đăng xuất</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Mạng xã hội</h1>
+            <div class="menu">
+                <a href="#" class="menu-item active">Trang chủ</a>
+                <a href="#" class="menu-item">Hồ sơ cá nhân</a>
+                <a href="#" class="menu-item">Bạn bè</a>
+                <a href="#" class="menu-item">Trò chuyện</a>
+                <a href="#" class="menu-item">Hoạt động</a>
+            </div>
+            <div class="login-form">
+                <h2>Đăng nhập</h2>
+                <form onsubmit="return login()">
+                    <input type="text" id="username" placeholder="Tên người dùng">
+                    <input type="password" id="password" placeholder="Mật khẩu">
+                    <button type="submit">Đăng nhập</button>
+                </form>
+            </div>
+            <div class="post-container" style="display: none;">
+                <div class="post-form">
+                    <textarea id="post-content" placeholder="Nhập nội dung bài viết..."></textarea>
+                    <button id="post-btn" onclick="addPost()">Đăng bài</button>
+                </div>
+                <!-- Hiển thị các bài đăng ở đây -->
+            </div>
+        </div>
+        <div class="sidebar-right">
+            <!-- Thêm nội dung cho cột bên phải ở đây -->
+            <h2>Thông tin cá nhân</h2>
+            <div class="user-info">
+                <img class="avatar" src="/HTML/TKWEB/imges/user.png" alt="Avatar">
+                <h3>Người dùng 1</h3>
+            </div>
+            <div class="friends-list">
+                <h3>Bạn bè</h3>
+                <ul>
+                    <li>Bạn bè 1</li>
+                    <li>Bạn bè 2</li>
+                    <li>Bạn bè 3</li>
+                    <!-- Thêm các bạn bè khác vào đây -->
+                </ul>
+            </div>
+            <div class="user-activity">
+                <h3>Hoạt động gần đây</h3>
+                <ul>
+                    <li>Bài viết 1</li>
+                    <li>Bài viết 2</li>
+                    <li>Bài viết 3</li>
+                    <!-- Thêm các hoạt động khác vào đây -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TGDD</title>
+    <style>
+        div.items{
+            display: flex;
+        }
+        div.item{
+            width: 50%;
+            background-color: lightskyblue;
+        }
+        div > img{
+            width: 100%;
+        }
+        div.thumb{
+            display: flex;
+        }
+        div.thumb > div{
+            width: 20%;
+        }
+        div > a>img{
+            width: 5%;
+        }
+    </style>
+    <script>
+        function changeImage(obj){ //Doi tuong
+            var path = obj.src
+            var img = document.getElementById("mainImg")
+            //img.src = path
+            img.setAttribute("src", path)
+        }
+        function init(){ //Colection
+            var images = document.querySelectorAll("div.thumb img")
+            for(var i=0; i<images.length; i++){
+                images[i].onlick = function(){
+                    var path = this.src
+                    var img = document.getElementById("mainImg")
+                    img.setAttribute("src", path)
+                }
+            }
+            var button = document.querySelectorAll(".btn > a")
+            for(var i=0; i<button.length; i++){
+                button[i].onlick = function(){
+                    event.preventDefault();
+                    var color = this.getAttribute("rel")
+                    var img = document.getElementById("mainImg")
+                    //img.src = "/HTML/img/iphone-14-plus-" + color + "-1.jpg"
+                    img.src = `/HTML/img/iphone-14-plus-${color}-1.jpg`
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div class="items">
+        <div class="item">
+            <img src="/HTML/img/iphone-14-plus-den-1.jpg" id="mainImg" alt="iphone"/>
+                <div class="thumb">
+                    <div><img src="/HTML/img/iphone-14-plus-ti-1.jpg" alt="1"></div>
+                    <div><img src="/HTML/img/iphone-14-plus-trang-1.jpg" alt="2"></div>
+                    <div><img src="/HTML/img/iphone-14-plus-xanh-1.jpg" alt="3"></div>
+                    <div><img src="/HTML/img/iphone-14-plus-den-1.jpg" alt="4"></div>
+                </div>
+        </div>
+        <div class="item">
+            <h1>IPHONE 14</h1>
+            <div class="btn">
+                <a href="#" rel="purple"><img src="/HTML/img/Java logo good.png" alt=""></a>
+                <a href="#" rel="white"><img src="/HTML/img/flask-python.png" alt=""></a>
+                <a href="#" rel="blue"><img src="/HTML/img/124-1248748_c-sharp-logo-png.png" alt=""></a>
+                <a href="#" rel="black"><img src="/HTML/img/6132222.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <script>
+        function giaiBac1(){
+            var a = document.getElementById("aId").value 
+            var b = document.getElementById("bId").value 
+
+            a = parseFloat(a)
+            b = parseFloat(b)
+            if(a==0){
+                if(b==0) {
+                    alert("Vo so nghiem!")
+                } else {
+                    alert("Vo nghiem!")
+                }
+            } else {
+                alert("Nghiem x= " + (-b/a))
+            }
+        }
+        function doiMauNen(obj){
+            var color = obj.value //document.getElementById("colorName").value 
+            var body = document.getElementById("bodyId")
+            body.style.backgroundColor = color
+        }
+
+        function init(){
+            var c = document.getElementById("colorName")
+            c.style.border= "1px solid red"
+        }
+        var timer = setInterval(function(){
+            var c = document.getElementById("clock")
+            var d = new Date()
+            c.innerText = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+        }, 1000)
+        var timer = null;
+        var left=0, topp=0, incX=5, incY=5;
+        function play(){
+            var ball = document.getElementById("ball")
+            var area = document.getElementsByClassName("ball-area")[0]
+            timer = setInterval(function(){
+                if(topp <0 || topp+ball.offsetHeight>=area.offsetHeight){
+                    incY=-incY
+                }
+                if(left<0 || left+ball.offsetWidth>=area.offsetWidth){
+                    incX = -incX
+                }
+                left+=incX;
+                topp+=incY;
+                ball.style.left = left + "px"
+                ball.style.top = topp + "px"
+            }, 100)
+        }
+        function stop(){
+            clearInterval(timer)
+        }
+    </script>
+    <style>
+         div.ball-area{
+            background-color: gray;
+            width: 500px;
+            height: 300px;
+            position: relative;
+        }
+        #ball{
+            width: 80px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body id="bodyId" onload="init()">
+    <div>
+        <h1 id="clock">00:00:00</h1>
+    </div>
+    <div>
+        <div>
+            <input type="button" value="Play" onclick="play()"/>
+            <input type="button" value="Stop" onclick="stop()"/>
+        </div>
+        <div class="ball-area">
+            <img id="ball" src="/HTML/img/—Pngtree—modren ball icon vector_5048397.png" alt="ball">
+        </div>
+    </div>
+    <input type="text" id="colorName" onchange="doiMauNen(this)" placeholder="Nhap ten mau va enter">
+    <h1>ax+b=0</h1>
+    <input type="text" id="aId" placeholder="a = "/>
+    <input type="text" id="bId" placeholder="b = "/>
+    <input type="button" value="GIAI" onclick="giaiBac1()"/>
+</body>
+</html>

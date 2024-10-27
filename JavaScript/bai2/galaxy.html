@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="galaxy.js" ></script>
+    <style>
+        .flex{
+            display: flex;
+        }
+        .demo img {
+            width:100%;
+        }
+
+        .demo > div:first-child {
+            width: 40%;
+        }
+
+        .thumb > div {
+            width: 20%;
+        }
+
+        .btn button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo flex">
+        <div>
+            <img src="/JavaScript/galaxys8/Black_1.jpg" id="main" alt="">
+            <div class="thumb flex">
+                <div><img src="/JavaScript/galaxys8/Black_1.jpg" alt=""></div>
+                <div><img src="/JavaScript/galaxys8/Black_2.jpg" alt=""></div>
+                <div><img src="/JavaScript/galaxys8/Black_3.jpg" alt=""></div>
+                <div><img src="/JavaScript/galaxys8/Black_4.jpg" alt=""></div>
+                <div><img src="/JavaScript/galaxys8/Black_5.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="btn">
+            <div><button rel="Black" style="background-color:black"></button></div>
+            <div><button rel="Blue" style="background-color:blue"></button></div>
+            <div><button rel="Gold" style="background-color:gold"></button></div>
+            <div><button rel="Silver" style="background-color:silver"></button></div>
+        </div>
+    </div>
+</body>
+</html>

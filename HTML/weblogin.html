@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đăng nhập</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    
+    .form-group button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Đăng nhập</h2>
+    <form id="login-form" onsubmit="return login()">
+      <div class="form-group">
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Đăng nhập</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // document.getElementById("login-form").addEventListener("submit", function(event) {
+    //   event.preventDefault(); // Prevent the form from submitting
+      
+    //   var username = document.getElementById("username").value;
+    //   var password = document.getElementById("password").value;
+      
+    //   // Kiểm tra đăng nhập (giả sử kiểm tra với tài khoản đã đăng ký trước đó)
+    //   if (username === "username" && password === "password") {
+    //     alert("Đăng nhập thành công!");
+    //     window.location.href = "homepage.html"; // Chuyển hướng đến trang chủ sau khi đăng nhập thành công
+    //   } else {
+    //     alert("Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.");
+    //   }
+      
+    //   document.getElementById("login-form").reset();
+    // });
+    function login(){
+      var user = document.getElementById("username").value
+      var pass = document.getElementById("password").value
+      var accounts = localStorage.getItem("accounts")?JSON.parse(localStorage.getItem("accounts")):[];
+      var foundAccount = accounts.find(function (account){
+        return account.user === user && account.pass === pass
+      });
+      if(foundAccount){
+        alert("Đăng nhập thành công!");
+        window.location.href = "https://www.google.com/";
+      } else{
+        alert("Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.");
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

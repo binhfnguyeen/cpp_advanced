@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="bai1c.js"></script>
+    <style>
+        @keyframes err{
+            from{
+                outline: unset;
+            } to {
+                outline: 1px solid red;
+            }
+        }
+
+        .error{
+            animation: err .5s 3;
+        }
+        
+        div input{
+            padding: 10px;
+            margin-top: 2px;
+        }
+
+        select{
+            padding: 10px;
+            padding-right: 20px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Chuyen doi don vi tien te</h1>
+    </nav>
+    <header>
+        <div>
+            <span>So tien</span>
+            <input type="number" id="money">
+            <span>(VND)</span>
+        </div>
+        <div>
+            <span>Don vi doi </span>
+            <select id="choice">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="aud">AUD</option>
+            </select>
+        </div>
+    </header>
+    <tfoot>
+        <input type="button" value="Doi tien" onclick="changeMoney()">
+    </tfoot>
+    <div id="kq"></div>
+</body>
+</html>
