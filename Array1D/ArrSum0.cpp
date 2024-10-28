@@ -1,3 +1,6 @@
+/*Tìm kiếm xem có tồn tại một tổng nào trong mảng mà xuất hiện ít nhất hai lần. 
+Nếu có, chương trình sẽ in ra 1 và kết thúc; nếu không, nó sẽ in ra -1.:*/
+
 #include <iostream>
 #include <map>
 using namespace std;
